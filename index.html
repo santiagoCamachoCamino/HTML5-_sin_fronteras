@@ -4,8 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primera Web</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
+    <div>
+        <p>Soy un párrafo dentro de un div</p>
+    </div>
+    <form action="/formulario" method="post">
+        <table style="width: 500px;">
+            <thead> <!--Agrupa las cabeceras-->
+                <tr><!-- Una fila Table Row-->
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr> 
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hola Beats</td>
+                    <td>Gratis</td>
+                </tr>
+                <tr>
+                    <td>Hola Beats</td>
+                    <td>Gratis</td>
+                </tr>
+                <tr>
+                    <td>Chanchito Feliz</td>
+                    <td>19.90$</td>
+                </tr>
+                <tr>
+                    <td>Chanchito Feliz muy feliz</td>
+                    <td>Gratis</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td></td>
+                <td>49.80$</td>
+            </tfoot>
+        </table>
+        <!-- ul lista no ordenada -->
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+        </ul>
+        <!-- ol lista ordenada -->
+        <ol>
+            <li value="50">Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5
+                <ol>
+                    <li style="list-style-type: lower-alpha;">sub elemento 1</li>
+                    <li style="list-style-type: lower-alpha;">sub elemento 2</li>
+                    <li style="list-style-type: lower-alpha;">sub elemento 3</li>
+                </ol>
+            </li>
+        </ol>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="tu nombre aquí" value="Hola"> 
+        <!--Es importante 'name' debido a que es la forma en se podra acceder al valor, cuando la
+        enviemos a una base de datos -->
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="tu nombre aquí" value="mundo"> 
+        <br>
+        <label for="comentario">Comentario</label>
+        <br>
+        <textarea rows="10" cols="50" name="comentario" id="comentario" placeholder="Ingrese Comentario">Esto es por defecto</textarea>
+        <input type="submit" >
+        <!-- El botón de submit va enviar todos los datos que se encuentren en el form al servidor, 
+        por lo que debemos especificar a donde se van enviar, y lo hacemos con 'action' que le
+        especificaremos una ruta. Después le tenemos que indicar el método que vamos utilizar para
+        enviar el formulario, donde tenemos 'GET' y 'POST', 'GET' lo que hará es enviar los valores
+        que se encuentran dentro de los campos a través de la URL; así 
+        '/index.html?nombre=Esteban&apellido=Camacho&comentario=LALA'.
+        Mientras que 'POST' enviara los datos a las cabeceras(headers) de la ruta que indicamos -->
+        <button type="button">Boton que necesitamos indicar que hcaer</button>
+        <button type="reset">Resetear</button> 
+        <button type="submit">Envia Formularios</button>
+        <!-- Etiqueta de boton es mucho más personalizable -->
+        
+    </form>
     <h1>Mi primer Heading</h1>
     <h2>Mi segundo Heading</h2>
     <h3>Mi tercer Heading</h3>
@@ -22,5 +107,9 @@
         la etiqueta de span 
     </p>
     <!-- Este es un comentario -->
+    <a href="https://www.google.co.nz" target="_blank">Ir a google</a>
+    <br>
+    <img src="img/casa-kame-de-dragon-ball_3840x2160_xtrafondos.com.jpg" width="400">
+    
 </body>
 </html>
